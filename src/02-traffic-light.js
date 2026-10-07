@@ -14,13 +14,28 @@
  *
  * Rules:
  *   - The function should be case-insensitive
- *     (e.g., "GREEN", "Green", "green" should all return "GO")
+ *     (e.g., "GREEN", "Green", "green" should all return GO")
  *
  * Hint: Use a switch statement!
  *
  * @param {string} color - The traffic light signal
- * @returns {string} The driving action to take
+ * @return {string} The driving action to take
  */
 export function getTrafficAction(color) {
-  // Your code here
+  if(color.toLowerCase()==="green"){
+    return "GO"
+  }
+  else if(color.toLowerCase()==="yellow"){
+    return "SLOW DOWN";
+  }
+  else if(color.toLowerCase()==="red"){
+    return "STOP";
+  }
+  else if(color.toLowerCase()==="flashing red"){
+    return "STOP AND PROCEED WITH CAUTION";
+  }
+  else{
+    return "INVALID SIGNAL";
+  }
+  
 }
